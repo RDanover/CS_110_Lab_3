@@ -10,28 +10,31 @@
   <body>
 
     <h1>Tic Tac Toe</h1>
-    <h2>Its your turn, <span class="display_player"></span>.</h2>
+    <h2 id = "debug"></h2>
+    <h2><span class="display_player" id="display_score">Scores: X:0 O:0</span>.</h2>
+    <h2>Its your turn: <span class="display_player" id="display_player_display">X</span>.</h2>
 
     <div class="game_board">
-      <div class='row'>
-        <div class="one"><span class="xo"></span></div>
-        <div class="two"><span class="xo"></span></div>
-        <div class="three"><span class="xo"></span></div>
+      <div class="row">
+        <div class="one" onclick="play('one')"><span class="xo" id="onebox"></span></div>
+        <div class="four" onclick="play('four')"><span class="xo" id="fourbox"></span></div>
+        <div class="seven" onclick="play('seven')"><span class="xo" id="sevenbox"></span></div>
       </div>
-      <div class='row'>
-        <div class="four"><span class="xo"></span></div>
-        <div class="five"><span class="xo"></span></div>
-        <div class="six"><span class="xo"></span></div>
+      <div class="row">
+        <div class="two" onclick="play('two')"><span class="xo" id="twobox"></span></div>
+        <div class="five" onclick="play('five')"><span class="xo" id="fivebox"></span></div>
+        <div class="eight" onclick="play('eight')"><span class="xo" id="eightbox"></span></div>
       </div>
-      <div class='row'>
-        <div class="seven"><span class="xo"></span></div>
-        <div class="eight"><span class="xo"></span></div>
-        <div class="nine"><span class="xo"></span></div>
+      <div class="row">
+        <div class="three" onclick="play('three')"><span class="xo" id="threebox"></span></div>
+        <div class = "six" onclick="play('six')"><span class="xo" id="sixbox"></span></div>
+        <div class="nine" onclick="play('nine')"><span class="xo" id="ninebox"></span></div>
       </div>
     </div>
 
-    <button class="new_game">New Game</button>
-    <button class="reset">Reset</button>
+    <button class="reset" onclick="reset()">Reset</button>
+    <button class="computer" onclick="new_game_cpu()">New Game Against Computer</button>
+    <button class="player" onclick="new_game_player()">New 2 Player Game</button>
   </body>
 
 
