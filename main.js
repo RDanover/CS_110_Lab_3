@@ -9,8 +9,6 @@ const board_state = [-1,-1,-1,-1,-1,-1,-1,-1,-1];
 function play(tile_location) {
 	var player_label = document.getElementById("display_player_display");
     var score_label = document.getElementById("display_score");
-    var debug_label = document.getElementById("debug");
-    debug_label.innerHTML = board_state;
     if(game_won==0&&move_count!=9){
         if(tile_location =='one'){
             var i = 0;
@@ -272,7 +270,6 @@ function play(tile_location) {
         if(play_state==1&&current_player==1&&game_won==0&&move_count!=9){
             play(get_cpu_move());
         }
-        debug_label.innerHTML = board_state;
     }
     
 }
